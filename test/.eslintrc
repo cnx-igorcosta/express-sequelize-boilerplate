@@ -1,0 +1,16 @@
+{
+  "globals": {
+    "it": true,
+    "describe": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+    "afterEach": true,
+    "context": true
+  },
+  "rules": {
+    "no-await-in-loop": 0,
+    "no-template-curly-in-string": 0,
+    "no-unused-expressions": 0,
+  }
+}

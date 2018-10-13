@@ -1,0 +1,8 @@
+development:
+  primary: mysql://root@localhost/afl_development?timezone=America/Sao_Paulo&dialect=mysql
+
+test:
+  primary: mysql://root@localhost/afl_test?timezone=America/Sao_Paulo&dialect=mysql
+
+production:
+  primary: env:SQL_PRIMARY_URL

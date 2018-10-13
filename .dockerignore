@@ -1,0 +1,8 @@
+node_modules/
+dist/
+test/
+.editorconfig
+.gitignore
+.npmrc
+bitbucket-pipelines.yml
+README.md

@@ -1,0 +1,7 @@
+CREATE TABLE `example` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(200) NOT NULL,
+  `user_id` INT(11) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,0 +1,6 @@
+--exit
+--slow 200
+--timeout 10000
+--reporter dot
+--growl
+--recursive

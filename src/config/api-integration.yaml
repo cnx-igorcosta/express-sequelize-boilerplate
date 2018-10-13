@@ -1,0 +1,5 @@
+defaults:
+  externalApiUri: http://localhost:3001
+
+production:
+  externalApiUri: env:EXTERNAL_API_URI
