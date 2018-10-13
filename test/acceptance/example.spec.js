@@ -29,26 +29,19 @@ describe('[Example]', () => {
 
     context('When required params sent', () => {
       const attrs = {
-        name: 'Example Name',
+        name: 'Example',
         age: 20,
       }
 
       const externalApiResponse = {
-        data: {
-          user_id: 1010,
-          user_name: 'Eren Jaeger',
-        },
+        user_id: 1010,
+        user_name: 'Eren Jaeger',
       }
 
       before(async () => {
-        try {
-          nock(externalApiUri)
-            .get('/api/v1/external')
-            .reply(200, externalApiResponse)
-
-        } catch(err) {
-          console.log(err)
-        }
+        nock(externalApiUri)
+          .get(`/api/v1/external?name=${attrs.name}&age=${attrs.age}`)
+          .reply(200, externalApiResponse)
 
         res = await request.post('/api/v1/example').send(attrs)
       })
@@ -60,7 +53,7 @@ describe('[Example]', () => {
       it('Should return example object', () => {
         expect(res.body.data).to.be.eql({
           id: 1,
-          name: 'Example Name',
+          name: 'Example',
           age: 20,
           user_id: 1010,
           user_name: 'Eren Jaeger',

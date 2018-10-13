@@ -1,7 +1,7 @@
 const Example = require('../models/example')
 
 module.exports = {
-  async post(attrs) {
+  async create(attrs) {
     // const example = new Example({ ...attrs })
 
     // const exampleAttrs = await example.save()
